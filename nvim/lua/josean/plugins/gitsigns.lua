@@ -1,0 +1,8 @@
+-- import gitsigns plugin safel
+local setup, gitsigns = pcall(require, "gitsigns")
+if not setup then
+	return
+end
+
+-- configure/enable gitsigns
+gitsigns.setup()
