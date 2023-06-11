@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["dracula.nvim"] = {
+    loaded = true,
+    path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/dracula.nvim",
+    url = "https://github.com/Mofiqul/dracula.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -216,10 +221,10 @@ _G.packer_plugins = {
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
-  ["tokyonight.nvim"] = {
+  ["trouble.nvim"] = {
     loaded = true,
-    path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
+    path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   ["typescript.nvim"] = {
     loaded = true,
@@ -245,6 +250,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["vim-visual-multi"] = {
+    loaded = true,
+    path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
+    url = "https://github.com/mg979/vim-visual-multi"
   }
 }
 

@@ -53,3 +53,11 @@ keymap.set("n", "<leader>nn", ":ToggleTerm<CR>") -- list available help tags
 keymap.set("n", "t1", "<Cmd>BufferGoto 1<CR>", {})
 keymap.set("n", "t2", "<Cmd>BufferGoto 2<CR>", {})
 keymap.set("n", "t3", "<Cmd>BufferGoto 3<CR>", {})
+
+-- trouble
+keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", { silent = true, noremap = true })
+keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", { silent = true, noremap = true })
+keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", { silent = true, noremap = true })
+keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", { silent = true, noremap = true })
+keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { silent = true, noremap = true })
+keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", { silent = true, noremap = true })

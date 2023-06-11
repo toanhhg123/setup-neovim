@@ -34,7 +34,7 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
 	-- theme
-	use("folke/tokyonight.nvim")
+	use("Mofiqul/dracula.nvim")
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 	use("szw/vim-maximizer") -- maximizes and restores current window
@@ -74,7 +74,6 @@ return packer.startup(function(use)
 
 	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
 	use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
-
 	-- configuring lsp servers
 	use("neovim/nvim-lspconfig") -- easily configure language servers
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
@@ -92,7 +91,8 @@ return packer.startup(function(use)
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
 	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
-
+	-- multi select
+	use("mg979/vim-visual-multi")
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = function()
@@ -111,6 +111,9 @@ return packer.startup(function(use)
 
 	--toggleterm terminal
 	use("akinsho/toggleterm.nvim")
+
+	-- trouble
+	use("folke/trouble.nvim")
 	if packer_bootstrap then
 		require("packer").sync()
 	end
