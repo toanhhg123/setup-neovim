@@ -29,6 +29,7 @@ mason_lspconfig.setup({
 		"lua_ls",
 		"omnisharp",
 		"csharp_ls",
+		"intelephense",
 		"emmet_ls",
 	},
 })

@@ -11,11 +11,18 @@ local keymap = vim.keymap -- for conciseness
 --
 --
 -- -- clear search highlights
-keymap.set("n", "<leader>nh", ":nohl<CR>")
 
--- delete single character without copying into register
+local modes = { "n", "v", "i" }
+
+for _, mode in ipairs(modes) do
+	keymap.set(mode, "<Left>", [[<Cmd>lua print("Lỗi: Phím mũi tên trái đã bị khoá")<CR>]])
+	keymap.set(mode, "<Right>", [[<Cmd>lua print("Lỗi: Phím mũi tên phải đã bị khoá")<CR>]])
+	keymap.set(mode, "<Up>", [[<Cmd>lua print("Lỗi: Phím mũi tên lên đã bị khoá")<CR>]])
+	keymap.set(mode, "<Down>", [[<Cmd>lua print("Lỗi: Phím mũi tên xuống đã bị khoá")<CR>]])
+	-- delete single character without copying into register
+end
+
 keymap.set("n", "x", '"_x')
-
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>") -- increment
 keymap.set("n", "<leader>-", "<C-x>") -- decrement
@@ -61,3 +68,11 @@ keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", { s
 keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", { silent = true, noremap = true })
 keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { silent = true, noremap = true })
 keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", { silent = true, noremap = true })
+
+for _, mode in ipairs({ "v", "n" }) do
+	keymap.set(mode, "<leader>j", "10j", { silent = true, noremap = true })
+	keymap.set(mode, "<leader>k", "10k", { silent = true, noremap = true })
+	keymap.set(mode, "<leader>l", "10l", { silent = true, noremap = true })
+	keymap.set(mode, "<leader>h", "10h", { silent = true, noremap = true })
+	-- delete single character without copying into register
+end

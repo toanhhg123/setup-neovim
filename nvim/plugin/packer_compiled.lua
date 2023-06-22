@@ -109,11 +109,6 @@ _G.packer_plugins = {
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["dracula.nvim"] = {
-    loaded = true,
-    path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/dracula.nvim",
-    url = "https://github.com/Mofiqul/dracula.nvim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -255,6 +250,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
     url = "https://github.com/mg979/vim-visual-multi"
+  },
+  ["vscode.nvim"] = {
+    loaded = true,
+    path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/vscode.nvim",
+    url = "https://github.com/Mofiqul/vscode.nvim"
   }
 }
 

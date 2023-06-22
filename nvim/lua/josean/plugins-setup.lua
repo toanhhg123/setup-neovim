@@ -34,9 +34,10 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
 	-- theme
-	use("Mofiqul/dracula.nvim")
+	use("Mofiqul/vscode.nvim")
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
+
 	use("szw/vim-maximizer") -- maximizes and restores current window
 
 	-- essential plugins
