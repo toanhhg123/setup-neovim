@@ -11,18 +11,28 @@ local keymap = vim.keymap -- for conciseness
 --
 --
 -- -- clear search highlights
-
+keymap.set("n", "<leader>nh", ":nohlsearch<CR>") -- list available help tags
 local modes = { "n", "v", "i" }
 
 for _, mode in ipairs(modes) do
-	keymap.set(mode, "<Left>", [[<Cmd>lua print("Lỗi: Phím mũi tên trái đã bị khoá")<CR>]])
+	keymap.set(mode, "<Left>", [[<Cmd>lua print("Lỗi: Phím mũi tên trái  bị khoá")<CR>]])
 	keymap.set(mode, "<Right>", [[<Cmd>lua print("Lỗi: Phím mũi tên phải đã bị khoá")<CR>]])
 	keymap.set(mode, "<Up>", [[<Cmd>lua print("Lỗi: Phím mũi tên lên đã bị khoá")<CR>]])
 	keymap.set(mode, "<Down>", [[<Cmd>lua print("Lỗi: Phím mũi tên xuống đã bị khoá")<CR>]])
 	-- delete single character without copying into register
 end
+--move cursor to last row
+keymap.set("n", "E", "$")
+keymap.set("v", "E", "$")
 
 keymap.set("n", "x", '"_x')
+
+--delete goback word
+keymap.set("n", "dw", 'vb"_d')
+
+-- select all
+keymap.set("n", "<C-a>", "gg<S-v>G")
+
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>") -- increment
 keymap.set("n", "<leader>-", "<C-x>") -- decrement
@@ -41,11 +51,6 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 ----------------------
 -- Plugin keybinds
 ----------------------
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
-vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximizatiom
 

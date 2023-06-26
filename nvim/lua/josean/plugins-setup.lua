@@ -1,4 +1,4 @@
--- auto install packer if not installed
+-- auto install packer if not installedtre
 local ensure_packer = function()
 	local fn = vim.fn
 	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -33,6 +33,7 @@ return packer.startup(function(use)
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
+	use("norcalli/nvim-colorizer.lua") -- color #fff #333
 	-- theme
 	use("Mofiqul/vscode.nvim")
 
@@ -58,6 +59,7 @@ return packer.startup(function(use)
 
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+	use("nvim-telescope/telescope-file-browser.nvim")
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
@@ -68,6 +70,8 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-buffer") -- source for text in buffer
 	use("hrsh7th/cmp-path") -- source for file system paths
 
+	--vscode line
+	use("onsails/lspkind-nvim")
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
@@ -108,7 +112,8 @@ return packer.startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
-	use("romgrk/barbar.nvim")
+
+	-- use("romgrk/barbar.nvim")
 
 	--toggleterm terminal
 	use("akinsho/toggleterm.nvim")
