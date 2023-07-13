@@ -1,3 +1,4 @@
+vim.opt.clipboard:append({ "unnamedplus" })
 local opt = vim.opt -- for conciseness
 
 -- line numbers

@@ -31,6 +31,8 @@ mason_lspconfig.setup({
 		"csharp_ls",
 		"intelephense",
 		"emmet_ls",
+		"spectral",
+		"yamlls",
 	},
 })
 

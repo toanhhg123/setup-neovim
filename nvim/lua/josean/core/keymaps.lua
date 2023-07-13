@@ -12,6 +12,8 @@ local keymap = vim.keymap -- for conciseness
 --
 -- -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohlsearch<CR>") -- list available help tags
+
+--delete tag htl
 local modes = { "n", "v", "i" }
 
 for _, mode in ipairs(modes) do
@@ -21,6 +23,7 @@ for _, mode in ipairs(modes) do
 	keymap.set(mode, "<Down>", [[<Cmd>lua print("Lỗi: Phím mũi tên xuống đã bị khoá")<CR>]])
 	-- delete single character without copying into register
 end
+
 --move cursor to last row
 keymap.set("n", "E", "$")
 keymap.set("v", "E", "$")
@@ -56,9 +59,6 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window max
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
-
---toggleterm
-keymap.set("n", "<leader>nn", ":ToggleTerm<CR>") -- list available help tags
 
 -- tab
 

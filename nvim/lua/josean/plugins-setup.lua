@@ -35,8 +35,10 @@ return packer.startup(function(use)
 
 	use("norcalli/nvim-colorizer.lua") -- color #fff #333
 	-- theme
-	use("Mofiqul/vscode.nvim")
-
+	use({
+		"svrana/neosolarized.nvim",
+		requires = { "tjdevries/colorbuddy.nvim" },
+	})
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
 	use("szw/vim-maximizer") -- maximizes and restores current window
@@ -65,11 +67,11 @@ return packer.startup(function(use)
 		tag = "0.1.1",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
+	use("neovim/nvim-lspconfig")
 	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
 	use("hrsh7th/cmp-buffer") -- source for text in buffer
 	use("hrsh7th/cmp-path") -- source for file system paths
-
 	--vscode line
 	use("onsails/lspkind-nvim")
 	-- snippets
@@ -80,16 +82,8 @@ return packer.startup(function(use)
 	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
 	use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
 	-- configuring lsp servers
-	use("neovim/nvim-lspconfig") -- easily configure language servers
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-	use({
-		"glepnir/lspsaga.nvim",
-		branch = "main",
-		requires = {
-			{ "nvim-tree/nvim-web-devicons" },
-			{ "nvim-treesitter/nvim-treesitter" },
-		},
-	}) -- enhanced lsp uis
+
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
@@ -106,6 +100,9 @@ return packer.startup(function(use)
 		end,
 	})
 
+	use({
+		"nvimdev/lspsaga.nvim",
+	})
 	-- auto closing
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
@@ -113,13 +110,16 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
-	-- use("romgrk/barbar.nvim")
+	--buffer line
+	-- use("akinsho/nvim-bufferline.lua")
 
-	--toggleterm terminal
-	use("akinsho/toggleterm.nvim")
+	-- use("romgrk/barbar.nvim")
 
 	-- trouble
 	use("folke/trouble.nvim")
+
+	use("lukas-reineke/indent-blankline.nvim")
+	use("dinhhuy258/git.nvim")
 	if packer_bootstrap then
 		require("packer").sync()
 	end
