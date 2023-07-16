@@ -35,10 +35,12 @@ return packer.startup(function(use)
 
 	use("norcalli/nvim-colorizer.lua") -- color #fff #333
 	-- theme
-	use({
-		"svrana/neosolarized.nvim",
-		requires = { "tjdevries/colorbuddy.nvim" },
-	})
+	-- use({
+	-- 	"svrana/neosolarized.nvim",
+	-- 	requires = { "tjdevries/colorbuddy.nvim" },
+	-- })
+	use("Mofiqul/dracula.nvim")
+
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
 	use("szw/vim-maximizer") -- maximizes and restores current window
@@ -72,6 +74,8 @@ return packer.startup(function(use)
 	use("hrsh7th/nvim-cmp") -- completion plugin
 	use("hrsh7th/cmp-buffer") -- source for text in buffer
 	use("hrsh7th/cmp-path") -- source for file system paths
+	use("folke/lsp-colors.nvim")
+
 	--vscode line
 	use("onsails/lspkind-nvim")
 	-- snippets
@@ -111,7 +115,7 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
 	--buffer line
-	-- use("akinsho/nvim-bufferline.lua")
+	use("akinsho/nvim-bufferline.lua")
 
 	-- use("romgrk/barbar.nvim")
 
@@ -120,6 +124,11 @@ return packer.startup(function(use)
 
 	use("lukas-reineke/indent-blankline.nvim")
 	use("dinhhuy258/git.nvim")
+
+	use("axelvc/template-string.nvim")
+
+	use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

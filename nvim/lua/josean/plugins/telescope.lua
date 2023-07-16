@@ -31,6 +31,7 @@ vim.keymap.set("n", "sf", function()
 		previewer = false,
 		initial_mode = "normal",
 		layout_config = { height = 40 },
+		theme = "ivy",
 	})
 end)
 

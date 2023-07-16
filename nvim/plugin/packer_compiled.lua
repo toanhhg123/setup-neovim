@@ -104,10 +104,10 @@ _G.packer_plugins = {
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["colorbuddy.nvim"] = {
+  ["dracula.nvim"] = {
     loaded = true,
-    path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
-    url = "https://github.com/tjdevries/colorbuddy.nvim"
+    path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/dracula.nvim",
+    url = "https://github.com/Mofiqul/dracula.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -128,6 +128,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["lsp-colors.nvim"] = {
+    loaded = true,
+    path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
+    url = "https://github.com/folke/lsp-colors.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -164,11 +169,6 @@ _G.packer_plugins = {
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["neosolarized.nvim"] = {
-    loaded = true,
-    path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/neosolarized.nvim",
-    url = "https://github.com/svrana/neosolarized.nvim"
-  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -178,6 +178,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
+  },
+  ["nvim-bufferline.lua"] = {
+    loaded = true,
+    path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua",
+    url = "https://github.com/akinsho/nvim-bufferline.lua"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -211,6 +216,11 @@ _G.packer_plugins = {
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/opt/nvim-ts-autotag",
     url = "https://github.com/windwp/nvim-ts-autotag"
   },
+  ["nvim-ufo"] = {
+    loaded = true,
+    path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/nvim-ufo",
+    url = "https://github.com/kevinhwang91/nvim-ufo"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -226,6 +236,11 @@ _G.packer_plugins = {
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["promise-async"] = {
+    loaded = true,
+    path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/promise-async",
+    url = "https://github.com/kevinhwang91/promise-async"
+  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
@@ -240,6 +255,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["template-string.nvim"] = {
+    loaded = true,
+    path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/template-string.nvim",
+    url = "https://github.com/axelvc/template-string.nvim"
   },
   ["trouble.nvim"] = {
     loaded = true,

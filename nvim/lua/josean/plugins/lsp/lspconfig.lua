@@ -16,7 +16,6 @@ if not typescript_setup then
 end
 
 local keymap = vim.keymap -- for conciseness
-vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>")
 -- enable keybinds only for when lsp server available
 local on_attach = function(client, bufnr)
 	-- keybind options
@@ -27,8 +26,9 @@ local on_attach = function(client, bufnr)
 	vim.keymap.set("n", "gr", "<Cmd>Lspsaga rename<CR>", opts)
 	keymap.set("n", "gf", "<cmd>Lspsaga finder<CR>", opts) -- show definition, references
 	keymap.set("n", "<leader>nn", "<cmd>Lspsaga term_toggle<CR>", opts) -- show definition, references
-	vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
+	keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
 	keymap.set("n", "gD", "<Cmd>Telescope lsp_definitions<CR>", opts) -- got to declaration
+	keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>")
 	keymap.set("n", "gd", "<Cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
 	keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
 	keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
