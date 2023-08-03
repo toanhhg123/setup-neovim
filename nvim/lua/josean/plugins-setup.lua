@@ -34,12 +34,11 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
 	use("norcalli/nvim-colorizer.lua") -- color #fff #333
-	-- theme
-	-- use({
-	-- 	"svrana/neosolarized.nvim",
-	-- 	requires = { "tjdevries/colorbuddy.nvim" },
-	-- })
-	use("Mofiqul/dracula.nvim")
+
+	use({
+		"svrana/neosolarized.nvim",
+		requires = { "tjdevries/colorbuddy.nvim" },
+	})
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
@@ -80,15 +79,19 @@ return packer.startup(function(use)
 	use("onsails/lspkind-nvim")
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
+
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
+
 	use("rafamadriz/friendly-snippets") -- useful snippets
 
 	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
+
 	use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
-	-- configuring lsp servers
+
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
 
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
+
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
 	-- formatting & linting
@@ -123,6 +126,7 @@ return packer.startup(function(use)
 	use("folke/trouble.nvim")
 
 	use("lukas-reineke/indent-blankline.nvim")
+
 	use("dinhhuy258/git.nvim")
 
 	use("axelvc/template-string.nvim")

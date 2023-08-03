@@ -1,40 +1,52 @@
-require("lualine").setup({
+local status, lualine = pcall(require, "lualine")
+if not status then
+	return
+end
+
+lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = "auto",
-		component_separators = { left = "", right = "" },
+		theme = "solarized_dark",
 		section_separators = { left = "", right = "" },
-		disabled_filetypes = {
-			statusline = {},
-			winbar = {},
-		},
-		ignore_focus = {},
-		always_divide_middle = true,
-		globalstatus = false,
-		refresh = {
-			statusline = 1000,
-			tabline = 1000,
-			winbar = 1000,
-		},
+		component_separators = { left = "", right = "" },
+		disabled_filetypes = {},
 	},
 	sections = {
 		lualine_a = { "mode" },
-		lualine_b = { "branch", "diff", "diagnostics" },
-		lualine_c = { { "filename", path = 3 } },
-		lualine_x = { "encoding", "fileformat", "filetype" },
+		lualine_b = { "branch" },
+		lualine_c = {
+			{
+				"filename",
+				file_status = true, -- displays file status (readonly status, modified status)
+				path = 0, -- 0 = just filename, 1 = relative path, 2 = absolute path
+			},
+		},
+		lualine_x = {
+			{
+				"diagnostics",
+				sources = { "nvim_diagnostic" },
+				symbols = { error = " ", warn = " ", info = " ", hint = " " },
+			},
+			"encoding",
+			"filetype",
+		},
 		lualine_y = { "progress" },
 		lualine_z = { "location" },
 	},
 	inactive_sections = {
 		lualine_a = {},
 		lualine_b = {},
-		lualine_c = { "filename" },
+		lualine_c = {
+			{
+				"filename",
+				file_status = true, -- displays file status (readonly status, modified status)
+				path = 1, -- 0 = just filename, 1 = relative path, 2 = absolute path
+			},
+		},
 		lualine_x = { "location" },
 		lualine_y = {},
 		lualine_z = {},
 	},
 	tabline = {},
-	winbar = {},
-	inactive_winbar = {},
-	extensions = {},
+	extensions = { "fugitive" },
 })

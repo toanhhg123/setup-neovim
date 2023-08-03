@@ -75,9 +75,9 @@ keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { silent = true
 keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", { silent = true, noremap = true })
 
 for _, mode in ipairs({ "v", "n" }) do
-	keymap.set(mode, "<leader>j", "10j", { silent = true, noremap = true })
-	keymap.set(mode, "<leader>k", "10k", { silent = true, noremap = true })
-	keymap.set(mode, "<leader>l", "10l", { silent = true, noremap = true })
-	keymap.set(mode, "<leader>h", "10h", { silent = true, noremap = true })
+	keymap.set(mode, "<leader>j", "20j", { silent = true, noremap = true })
+	keymap.set(mode, "<leader>k", "20k", { silent = true, noremap = true })
+	keymap.set(mode, "<leader>l", "20l", { silent = true, noremap = true })
+	keymap.set(mode, "<leader>h", "20h", { silent = true, noremap = true })
 	-- delete single character without copying into register
 end

@@ -104,10 +104,10 @@ _G.packer_plugins = {
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["dracula.nvim"] = {
+  ["colorbuddy.nvim"] = {
     loaded = true,
-    path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/dracula.nvim",
-    url = "https://github.com/Mofiqul/dracula.nvim"
+    path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
+    url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -168,6 +168,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["neosolarized.nvim"] = {
+    loaded = true,
+    path = "/Users/toanle/.local/share/nvim/site/pack/packer/start/neosolarized.nvim",
+    url = "https://github.com/svrana/neosolarized.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
