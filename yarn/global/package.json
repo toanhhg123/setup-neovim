@@ -2,6 +2,6 @@
   "dependencies": {
     "create-next": "^0.1.4",
     "create-next-app": "^13.3.4",
-    "create-vite": "^4.3.1"
+    "create-vite": "^4.3.2"
   }
 }

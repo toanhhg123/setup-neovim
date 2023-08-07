@@ -45,7 +45,38 @@ local on_attach = function(client, bufnr)
 end
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
-local signs = { Error = " ", Warn = " ", Hint = "ﴞ ", Info = " " }
+local signs = {
+	"", -- Text
+	"", -- Method
+	"", -- Function
+	"", -- Constructor
+	"", -- Field
+	"", -- Variable
+	"", -- Class
+	"ﰮ", -- Interface
+	"", -- Module
+	"", -- Property
+	"", -- Unit
+	"", -- Value
+	"", -- Enum
+	"", -- Keyword
+	"﬌", -- Snippet
+	"", -- Color
+	"", -- File
+	"", -- Reference
+	"", -- Folder
+	"", -- EnumMember
+	"", -- Constant
+	"", -- Struct
+	"", -- Event
+	"ﬦ", -- Operator
+	"", -- TypeParameter
+	Error = " ",
+	Warn = " ",
+	Hint = "ﴞ ",
+	Info = " ",
+}
+
 for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })

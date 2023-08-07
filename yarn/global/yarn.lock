@@ -57,10 +57,10 @@ create-next@^0.1.4:
     fs-extra "^3.0.1"
     yargs "^8.0.2"
 
-create-vite@^4.3.1:
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/create-vite/-/create-vite-4.3.1.tgz#422666f64bfa32f77bcce0474861a6b147348b1f"
-  integrity sha512-bQ2dSjnk+aLNJKGMeec1bU5PB5YRmdpZ6HaqbmfOXiiyfh3TaiYPUIRX+pqCVaaR8J5Rgfv9bjjCXRzRzqmxNw==
+create-vite@^4.3.2:
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/create-vite/-/create-vite-4.3.2.tgz#c4abb0a29611e51af6abc2fdc3479d1cfc8ce489"
+  integrity sha512-06SE3okEJD9r792cY1ZvtNVZgiVx8+mrx4Vfph8+GTVjwStAc4noSEvBLy9CJaeAVhpKBWBbc3Wzl1gUoScVvA==
 
 creed@^1.2.1:
   version "1.4.0"
