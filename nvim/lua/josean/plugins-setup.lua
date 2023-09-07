@@ -1,4 +1,4 @@
--- auto install packer if not installedtre
+-- auto install packer if not installedtreset
 local ensure_packer = function()
 	local fn = vim.fn
 	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -27,6 +27,7 @@ if not status then
 end
 
 -- add list of plugins to install
+
 return packer.startup(function(use)
 	-- packer can manage itself
 	use("wbthomason/packer.nvim")
@@ -34,6 +35,12 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
 	use("norcalli/nvim-colorizer.lua") -- color #fff #333
+
+	--theme
+	-- use({
+	-- 	"lalitmee/cobalt2.nvim",
+	-- 	requires = "tjdevries/colorbuddy.nvim",
+	-- })
 
 	use({
 		"svrana/neosolarized.nvim",
@@ -77,8 +84,15 @@ return packer.startup(function(use)
 
 	--vscode line
 	use("onsails/lspkind-nvim")
+
 	-- snippets
-	use("L3MON4D3/LuaSnip") -- snippet engine
+	use({
+		"L3MON4D3/LuaSnip",
+		-- follow latest release.
+		tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+		-- install jsregexp (optional!:).
+		run = "make install_jsregexp",
+	})
 
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
 
@@ -132,6 +146,7 @@ return packer.startup(function(use)
 	use("axelvc/template-string.nvim")
 
 	use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
+	use("mfussenegger/nvim-lint")
 
 	if packer_bootstrap then
 		require("packer").sync()

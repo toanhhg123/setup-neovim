@@ -111,6 +111,8 @@ lspconfig["volar"].setup({
 })
 
 lspconfig["omnisharp_mono"].setup({})
+
+lspconfig["bufls"].setup({})
 -- configure css server
 lspconfig["cssls"].setup({
 	capabilities = capabilities,
@@ -127,6 +129,7 @@ lspconfig["intelephense"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
+
 -- configure emmet language server
 lspconfig["emmet_ls"].setup({
 	capabilities = capabilities,

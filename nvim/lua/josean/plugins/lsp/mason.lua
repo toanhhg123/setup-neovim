@@ -33,6 +33,8 @@ mason_lspconfig.setup({
 		"emmet_ls",
 		"spectral",
 		"yamlls",
+		"bufls",
+		-- "nomicfoundation-solidity-language-server",
 	},
 })
 
@@ -42,6 +44,8 @@ mason_null_ls.setup({
 		"prettier", -- ts/js formatter
 		"stylua", -- lua formatter
 		"eslint_d", -- ts/js linter
+		"protolint",
+		"buf",
 	},
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,
